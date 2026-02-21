@@ -4,9 +4,9 @@ toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("light");
 
   if (document.body.classList.contains("light")) {
-    toggleBtn.textContent = "DARK";
-  } else {
     toggleBtn.textContent = "LIGHT";
+  } else {
+    toggleBtn.textContent = "DARK";
   }
 });
 
