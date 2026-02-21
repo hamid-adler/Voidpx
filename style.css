@@ -21,6 +21,7 @@ body {
   align-items: center;
 }
 
+
 .frame {
   width: 96vw;
   height: 96vh;
@@ -54,19 +55,28 @@ body {
   flex-direction: column;
 }
 
-.content > section:last-child {
-  border-bottom: none;
-  display: flex;
-}
-
 .content__welcome {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  align-items: center;
-  text-align: center;
   border-bottom: 2px solid white;
+  justify-content: center;
+  margin: 0;
+}
+
+
+.content__welcome__text{
+margin: 0 ;
+justify-content: center;
+align-items: center;
+flex-direction: column ;
+text-align: center;
+color: white;
+font-size:1.5rem;
+
+}
+
+.content__welcome__text h3{
+  position: relative;
+  bottom: 1rem;
 }
 
 .content__collections{
@@ -80,26 +90,43 @@ body {
   border-bottom: 2px solid white;
 }
 
-.about-left {
+.about__left {
   flex: 2;
   border-right: 2px solid white;
   padding: 1rem;
 }
 
-.about-right {
+
+.about__left__text{
+  color: white;
+}
+
+
+
+.about__right {
   flex: 1;
   display: flex;
   flex-direction: column;
+
 }
 
-.right-top, .right-bottom {
+.about__right__top, .about__right__bottom {
   flex: 1;
   border-bottom: 2px solid white;
   padding: 0.5rem;
+  align-content: center;
 }
 
-.right-bottom {
+.about__right__bottom{
   border-bottom: none;
+}
+
+.acount{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
 .footer {
@@ -111,7 +138,3 @@ body {
   color: white;
   font-size: 0.8rem;
 }
-
-/* body::-webkit-scrollbar {
-  display: none;
-} */
