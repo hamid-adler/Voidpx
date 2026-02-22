@@ -73,7 +73,8 @@ body {
 }
 
 .content__collections {
-  flex: 1;
+
+  height: 80%;
 }
 
 .pagination {
@@ -82,7 +83,7 @@ body {
   align-items: center;
   gap: 2rem;
   position: relative;
-  bottom: 20px;
+  height: 15%;
 }
 
 .page-btn {
