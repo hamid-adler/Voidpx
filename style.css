@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'LowresPixel';
-  src: url('assets/font/LowresPixel-Regular.otf') format('opentype');
+  font-family: "LowresPixel";
+  src: url("assets/font/LowresPixel-Regular.otf") format("opentype");
 }
 
 a {
@@ -23,19 +23,19 @@ body.light {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
   background: var(--bg-color);
-  font-family: 'LowresPixel', monospace;
+  font-family: "LowresPixel", monospace;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .frame {
@@ -70,7 +70,10 @@ body {
   font-family: inherit;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
-  transition: transform 0.1s, background 0.2s, color 0.2s;
+  transition:
+    transform 0.1s,
+    background 0.2s,
+    color 0.2s;
 }
 
 .theme__toggle:active {
@@ -78,21 +81,17 @@ body {
 }
 
 .content__collections {
-
   height: 80%;
-  
 }
 
-.content__square{
+.content__square {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5rem;
   justify-content: space-around;
   align-items: center;
-  
-
 }
-.square{
+.square {
   width: 20vh;
   height: 25vh;
   margin: 0;
@@ -100,10 +99,9 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
-.square img{
+.square img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -114,10 +112,9 @@ body {
   aspect-ratio: 1/1;
 } */
 
-@media (max-width: 400px){
-  .square{
+@media (max-width: 400px) {
+  .square {
     flex: 1 1 80%;
-
   }
 }
 .pagination {
@@ -127,7 +124,6 @@ body {
   gap: 2rem;
   position: relative;
   height: 15%;
-  
 }
 
 .page__btn {
@@ -137,7 +133,10 @@ body {
   font-family: inherit;
   padding: 0.3rem 0.8rem;
   cursor: pointer;
-  transition: transform 0.1s, background 0.2s, color 0.2s;
+  transition:
+    transform 0.1s,
+    background 0.2s,
+    color 0.2s;
   background-color: var(--bg-color);
 }
 
@@ -174,11 +173,11 @@ body {
   margin: 0 1.3rem;
 }
 
-.footer__logo img{
+.footer__logo img {
   height: 1.5rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
-.light .footer__logo img{
-  filter:invert(1);
+.light .footer__logo img {
+  filter: invert(1);
 }
