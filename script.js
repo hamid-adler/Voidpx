@@ -10,6 +10,18 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
+const hamburger = document.querySelector(".menu");
+const sideMenu = document.querySelector(".side__menu");
+const closeBtn = document.querySelector(".close__btn");
+
+hamburger.addEventListener("click", () => {
+  sideMenu.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  sideMenu.classList.remove("active");
+});
+
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const pageNumber = document.getElementById("pageNumber");
@@ -28,7 +40,7 @@ nextBtn.addEventListener("click", () => {
   pageNumber.textContent = currentPage;
 });
 
-const squares = document.querySelectorAll('.square');
+const boxs = document.querySelectorAll('.box');
 
 const images = [
   'assets/image/Alien.png',
@@ -45,8 +57,8 @@ const images = [
   'assets/image/Coin.png',
 ];
 
-squares.forEach((square, index) => {
+boxs.forEach((box, index) => {
   const img = document.createElement('img');  // ساخت تگ img
   img.src = images[index];
-  square.appendChild(img);                     // اضافه کردن به مربع
+  box.appendChild(img);                     // اضافه کردن به مربع
 });

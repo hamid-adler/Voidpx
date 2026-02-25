@@ -1,39 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voidpx | Pixel Collection</title>
-  <meta name="description" content="Voidpx pixel art collection and creative experiments.">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voidpx | Pixel Collection</title>
+    <meta
+      name="description"
+      content="Voidpx pixel art collection and creative experiments."
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="./responsive.css"> -->
+  </head>
 
-<body>
-
-  <main class="frame">
-
-    <header class="navbar">
+  <body>
+    <main class="frame">
+      <header class="navbar">
         <h1 class="navbar__title">VOIDPX</h1>
-        <button id="themeToggle" class="theme__toggle">DARK</button>
-    </header>
+        <div class="search__box">
+          <form id="search">
+            <input type="text" placeholder="Search for Images..." />
+            <input class="search__button" type="button" value="Search" />
+          </form>
+          <button id="themeToggle" class="theme__toggle">DARK</button>
+        </div>
+        <div class="menu">
+          +
+        </div>
+      </header>
+      <div class="side__menu" id="sideMenu">
+        <button class="close__btn">X</button>
+        <input type="text" placeholder="search">
+      </div>
 
       <section class="content__collections">
-        <div class="content__square">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
+        <div class="content__box">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
         </div>
-        <div class="content__square">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
+        <div class="content__box">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
         </div>
       </section>
       <section class="pagination">
@@ -41,29 +56,28 @@
         <span id="pageNumber">1</span>
         <button id="nextBtn" class="page__btn">NEXT</button>
       </section>
-    <footer class="footer">
-      <div class="footer__logo">
-        <a href="https://github.com/mammaddrik">
-          <img src="./assets/image/Github.png" alt="Github Icon">
-        </a>
-        <a href="https://www.linkedin.com/in/mammaddrik/">
-          <img src="./assets/image/LinkedIn.png" alt="LinkedIn Icon">
-        </a>
-      </div>
-      
-      <p>© 2026 VOIDPX - ALL RIGHTS RESERVED</p>
-      <div class="footer__logo">
-        <a href="https://github.com/hamid-adler">
-          <img src="./assets/image/Github.png" alt="Github Icon">
-        </a>
-        <a href="https://www.linkedin.com/in/hamid-adler">
-          <img src="./assets/image/LinkedIn.png" alt="LinkedIn Icon">
-        </a>
-      </div>
-    </footer>
+      <footer class="footer">
+        <div class="footer__logo">
+          <a href="https://github.com/mammaddrik">
+            <img src="./assets/image/Github.png" alt="Github Icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/mammaddrik/">
+            <img src="./assets/image/LinkedIn.png" alt="LinkedIn Icon" />
+          </a>
+        </div>
 
-  </main>
+        <p>© 2026 VOIDPX - ALL RIGHTS RESERVED</p>
+        <div class="footer__logo">
+          <a href="https://github.com/hamid-adler">
+            <img src="./assets/image/Github.png" alt="Github Icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/hamid-adler">
+            <img src="./assets/image/LinkedIn.png" alt="LinkedIn Icon" />
+          </a>
+        </div>
+      </footer>
+    </main>
 
-  <script src="script.js" defer></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
