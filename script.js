@@ -1,7 +1,3 @@
-// =====================================
-// VOIDPX | Final script.js with JSON images
-// =====================================
-
 // ---------- Theme Toggle ----------
 const toggleBtn = document.getElementById("themeToggle");
 toggleBtn.addEventListener("click", () => {
@@ -10,31 +6,30 @@ toggleBtn.addEventListener("click", () => {
 });
 
 // ---------- Side Menu ----------
-const hamburger = document.querySelector(".menu");
+const menu = document.querySelector(".menu");
 const sideMenu = document.querySelector(".side__menu");
 const closeBtn = document.querySelector(".close__btn");
 
-hamburger.addEventListener("click", () => sideMenu.classList.add("active"));
+menu.addEventListener("click", () => sideMenu.classList.add("active"));
 closeBtn.addEventListener("click", () => sideMenu.classList.remove("active"));
 
 // ---------- Images & Pagination ----------
 const boxs = document.querySelectorAll('.box');
-let images = []; // all image paths will be loaded from JSON
+let images = [];
 const imagesPerPage = boxs.length;
 let currentPage = 1;
-let currentFilteredImages = []; // current array used for pagination and search
+let currentFilteredImages = [];
 
 const pageNumber = document.getElementById("pageNumber");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
-// Function to display current page images
 function showPage() {
   const startIndex = (currentPage - 1) * imagesPerPage;
   const endIndex = startIndex + imagesPerPage;
   const pageImages = currentFilteredImages.slice(startIndex, endIndex);
 
-  boxs.forEach(box => box.innerHTML = ""); // clear boxes
+  boxs.forEach(box => box.innerHTML = "");
 
   pageImages.forEach((src, index) => {
     const img = document.createElement('img');
@@ -47,7 +42,6 @@ function showPage() {
   nextBtn.disabled = endIndex >= currentFilteredImages.length;
 }
 
-// Pagination buttons
 prevBtn.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;
@@ -65,9 +59,8 @@ nextBtn.addEventListener("click", () => {
 fetch('assets/image/images.json')
   .then(res => res.json())
   .then(data => {
-    // map names to full paths
     images = data.map(name => 'assets/image/' + name);
-    currentFilteredImages = [...images]; // initialize filtered array
+    currentFilteredImages = [...images];
     showPage();
   })
   .catch(err => console.error('Failed to load images.json', err));
@@ -76,24 +69,20 @@ fetch('assets/image/images.json')
 const searchInput = document.querySelector('#search input');
 const searchBtn = document.querySelector('.search__button');
 
-// Function to filter images based on query
 function showFilteredImages(query) {
   currentFilteredImages = images.filter(img => img.toLowerCase().includes(query));
   currentPage = 1;
   showPage();
 }
 
-// Active search only on Enter or button click
 function handleSearch() {
   const query = searchInput.value.toLowerCase().trim();
-  if (query === "") return; // do nothing if input is empty
+  if (query === "") return;
   showFilteredImages(query);
 }
 
-// Button click triggers search
 searchBtn.addEventListener('click', handleSearch);
 
-// Enter key triggers search
 searchInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     e.preventDefault();
@@ -101,7 +90,6 @@ searchInput.addEventListener('keypress', (e) => {
   }
 });
 
-// If input is cleared → reset images immediately
 searchInput.addEventListener('input', () => {
   if (searchInput.value.trim() === "") {
     currentFilteredImages = [...images];
